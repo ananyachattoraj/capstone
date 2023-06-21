@@ -1,0 +1,6 @@
+- [x]get data (flicker 8k + captions)
+- []EDA images
+- []EDA captions
+- []create training and test groups
+- []exploring computer vision
+- []exploring supervised machine learning
