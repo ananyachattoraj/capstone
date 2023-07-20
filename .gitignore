@@ -2,5 +2,7 @@
 *.csv
 *.txt
 *.zip
+*.pdf
+*.png
 fuckaround.ipynb
 Modeling_copy.ipynb
