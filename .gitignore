@@ -4,5 +4,6 @@
 *.zip
 *.pdf
 *.png
+*.h5
 fuckaround.ipynb
 Modeling_copy.ipynb
