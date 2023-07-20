@@ -5,5 +5,6 @@
 *.pdf
 *.png
 *.h5
+*.pkl
 fuckaround.ipynb
 Modeling_copy.ipynb
