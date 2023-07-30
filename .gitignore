@@ -1,6 +1,7 @@
 *.jpg
 *.csv
 *.txt
+!requirements.txt
 *.zip
 *.pdf
 *.png

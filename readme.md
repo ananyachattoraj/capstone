@@ -4,22 +4,22 @@ The purpose of this project is to use transfer learning for caption generation g
 ## Data
 Data was downloaded from the [Flickr8k Images + Captions Kaggle Dataset](https://www.kaggle.com/datasets/aladdinpersson/flickr8kimagescaptions)
 
-This dataset contains approximately 8k images with 5 captions each. 
+This dataset contains approximately 8k images with 5 captions each. Due to technical limitations, the dataset was downsampled to approximately 1200 images. The following sections describe the contents within the corresponding Jupyter Notebooks.
 
 ## EDA
-Images and captions are EDA'd separately. This dataset is very clean: there are no null values and all images have the same number of captions. For deeper EDA, melding with the pre-processing workflow, I examine the most frequently used words to describe my training set. I also create an "average" image based on the values of the pixels in my training set.
+The EDA notebook holds initial EDA on images and captions. Images were displayed alongside their captions. Random images and their first captions along with a single image and multiple captions were checked. Captions were then put into a dataframe alongside the relevant images for preprocessing.
 
 ## Pre-processing
-Pre-processing includes tokenizing the natural language captions and preparing images as arrays. NLP pre-processing will be done using Keras Tokenizer and image prep will be done using Keras utilities such as img to array. Since images are not sorted into "categories" in the same sense as an image classifier system, Keras Image Data Generator is not used.
+The Pre-processing notebook includes deeper data analysis and pre-processing methods for both images and captions. Downsampling and ground truth caption selection are justified by analyzing word frequencies in the existing captions. Initially, only a single caption was taken for modeling, but this was later changed to including all 5 captions.
+
+Pre-processing included tokenizing the natural language captions and extracting image features using EfficientNetV2S. NLP pre-processing will be done using Keras Tokenizer. All preprocessed dictionaries and dataframes were saved as pickle files for use in modeling.
 
 ## Modeling
-Modeling will be done using Keras EfficientNetV2S.
+The modeling notebook includes generator functions for model training, validation, and testing. Modeling proceeded in stages:
 
-## To Do
-- [x]get data (flicker 8k + captions)
-- [x]EDA images
-- [x]EDA captions
-- [x]create training and test groups
-- []exploring image layers in cnn
-- []exploring layers of lstm
-- []exploring supervised machine learning
+Early modeling stages saw images that were simply converted into arrays for Conv2D and Pooling layers. Early modeling also only utilized a single caption as text input for Embedding and LSTM layers. Later models used extracted image features and all 5 captions tokenized. Generator functions and layer input requirements were updated accordingly.
+
+The best performing model was Model 13. Details may be found in the modeling notebook.
+
+## Final
+The final notebook simply carries forward the model file and all required variables and functions in a clean notebook for test image and caption generation.
