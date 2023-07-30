@@ -16,6 +16,7 @@ Pre-processing included tokenizing the natural language captions and extracting 
 
 ## Modeling
 The modeling notebook includes generator functions for model training, validation, and testing. Modeling proceeded in stages:
+
 ![image](https://github.com/ananyachattoraj/capstone/assets/15469141/a6dfb0f1-599f-49f2-a671-23da587d83bc)
 
 Early modeling stages saw images that were simply converted into arrays for Conv2D and Pooling layers. Early modeling also only utilized a single caption as text input for Embedding and LSTM layers. Later models used extracted image features and all 5 captions tokenized. Generator functions and layer input requirements were updated accordingly.
