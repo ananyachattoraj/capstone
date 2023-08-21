@@ -1,6 +1,11 @@
 ## Purpose
 The purpose of this project is to use transfer learning for caption generation given an image input. This model will be useful for automated captioning for accessibility in the form of ALT text as well as automated captioning for SEO.
 
+## Demo
+Watch the completed demo video that includes explanation for my motivation, a little about the architecture of the final model, and a demonstration of the Gradio interface!
+
+https://github.com/ananyachattoraj/capstone/assets/15469141/f90d8955-39d3-4c1f-95e7-f48a2103cbc2
+
 ## Data
 Data was downloaded from the [Flickr8k Images + Captions Kaggle Dataset](https://www.kaggle.com/datasets/aladdinpersson/flickr8kimagescaptions)
 
